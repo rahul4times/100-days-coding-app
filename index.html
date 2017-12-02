@@ -34,18 +34,7 @@
     <p>Pick one</p>
     <div class="menuitem"><a href="#">Project1</a></div>
 
-    {% for user in users %}
-        <li><a href="{{ user.url }}">{{ user.login }}</a></li>
-        # Placeholder for commit graph
-        <p>{{ user.bio }}</a></p>
-    {% endfor %}
-  </div>
 
-  <div class="menu">
-    <h2>Languages</h2>
-    {% for tag in tags %}
-        <li><a href="{{ tag }}">{{ tag }}</a></li>
-    {% endfor %}
   </div>
 </div>
 
