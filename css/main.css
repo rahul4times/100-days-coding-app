@@ -8,9 +8,12 @@ body{
 * {
   box-sizing: border-box;
 }
+h1, h2, h3, h4, h5, h6{
+  color: #720fbc;
+}
 .header{
   background-color:#fff;
-  padding:15px;
+  padding:30px;
   text-align:center;
   border-bottom: 1px solid #828282;
   line-height: 5px;
@@ -42,6 +45,9 @@ body{
   margin-bottom: 1em;
   border-radius: 2px;
 }
+.menuitem a:hover{
+  color:#828282;
+}
 .main {
   float:left;
   width:58%;
@@ -64,6 +70,12 @@ body{
   text-align:center;
   border: 1px solid #828282;
   border-radius: 2px;
+}
+.github-icon i{
+  font-size: 45px;
+}
+.github-icon i:hover{
+  color:#828282;
 }
 .footer{
   background-color:#fff;
