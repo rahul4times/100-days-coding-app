@@ -1,31 +1,67 @@
-"""Github API request.
-
-
-"""
 import os
 import requests
 
+from flask import Flask
+from flask import render_template
 from bs4 import BeautifulSoup
 
+
+app = Flask(__name__)
+
 API_TOKEN = os.getenv("API_TOKEN")
-API_URL = os.getenv("API_URL")
+API_URL = "https://api.github.com"
 
 
-def api():
-    request = requests.get(API_URL, params=None, auth=API_TOKEN)
+@app.route('/')
+def main():
+    return render_template('index.html')
 
 
 def user():
     """Get a single user.
 
     Example:
-        >>>GET users/:username/stats/participation
-        {
-            "owner": [11, 12, 0, 34, 0]
+        >>>GET users/:username
+        {'avatar_url': 'https://avatars3.githubusercontent.com/u/9888209?v=4',
+         'bio': 'Data Science, Python, and Statistics.\r\nVersed in the Python ecosystem for scientific computing, Statistics, and Machine Learning. Studied in best practices in s',
+         'blog': '',
+         'company': 'Galavanize Inc',
+         'created_at': '2014-11-21T18:58:58Z',
+         'email': None,
+         'events_url': 'https://api.github.com/users/ratchetwrench/events{/privacy}',
+         'followers': 5,
+         'followers_url': 'https://api.github.com/users/ratchetwrench/followers',
+         'following': 3,
+         'following_url': 'https://api.github.com/users/ratchetwrench/following{/other_user}',
+         'gists_url': 'https://api.github.com/users/ratchetwrench/gists{/gist_id}',
+         'gravatar_id': '',
+         'hireable': True,
+         'html_url': 'https://github.com/ratchetwrench',
+         'id': 9888209,
+         'location': 'Phoenix, Arizona',
+         'login': 'ratchetwrench',
+         'name': 'David',
+         'organizations_url': 'https://api.github.com/users/ratchetwrench/orgs',
+         'public_gists': 11,
+         'public_repos': 25,
+         'received_events_url': 'https://api.github.com/users/ratchetwrench/received_events',
+         'repos_url': 'https://api.github.com/users/ratchetwrench/repos',
+         'site_admin': False,
+         'starred_url': 'https://api.github.com/users/ratchetwrench/starred{/owner}{/repo}',
+         'subscriptions_url': 'https://api.github.com/users/ratchetwrench/subscriptions',
+         'type': 'User',
+         'updated_at': '2017-12-02T17:35:06Z',
+         'url': 'https://api.github.com/users/ratchetwrench'
         }
 
     """
-    request = requests.get()
+    request = requests.get(f"{API_URL}/users/{user}").json()
+    user = request.get(["avatar_url",
+                        "bio",
+                        "url",
+                        "login"])
+
+    return user
 
 
 def repo():
@@ -92,7 +128,7 @@ def commit_graph():
 
     Data Graph URL:
         "data-graph-url="/users/ratchetwrench/contributions"
-    
+
     XPath:
         #js-pjax-container >
             div > div.col-9.float-left.pl-2 >
@@ -101,6 +137,10 @@ def commit_graph():
                         div.mb-5.border.border-gray-dark.rounded-1.py-2 >
                             div.js-calendar-graph.is-graph-loading.graph-canvas.calendar-graph.height-full
 
-    :return: 
+    :return:
     """
     request = requests.get("/users/{username}/contributions")
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

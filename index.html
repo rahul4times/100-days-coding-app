@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -33,22 +33,19 @@
     <h2>Projects</h2>
     <p>Pick one</p>
     <div class="menuitem"><a href="#">Project1</a></div>
-    <!-- <div class="menuitem"><a href="#">Java</a></div>
-    <div class="menuitem"><a href="#">C</a></div>
-    <div class="menuitem"><a href="#">C++</a></div>
-    <div class="menuitem"><a href="#">C#</a></div>
-    <div class="menuitem"><a href="#">Objective-C</a></div>
-    <div class="menuitem"><a href="#">PHP</a></div>
-    <div class="menuitem"><a href="#">Python</a></div>
-    <div class="menuitem"><a href="#">Ruby</a></div>
-    <div class="menuitem"><a href="#">JavaScript</a></div>
-    <div class="menuitem"><a href="#">SQL</a></div>
-    <div class="menuitem"><a href="#">React</a></div>
-    <div class="menuitem"><a href="#">Angular</a></div>
-    <div class="menuitem"><a href="#">ASP</a></div>
-    <div class="menuitem"><a href="#">Node.js</a></div>
-    <div class="menuitem"><a href="#">CSS</a></div>
-    <div class="menuitem"><a href="#">Bootstrap</a></div> -->
+
+    {% for user in users %}
+        <li><a href="{{ user.url }}">{{ user.login }}</a></li>
+        # Placeholder for commit graph
+        <p>{{ user.bio }}</a></p>
+    {% endfor %}
+  </div>
+
+  <div class="menu">
+    <h2>Languages</h2>
+    {% for tag in tags %}
+        <li><a href="{{ tag }}">{{ tag }}</a></li>
+    {% endfor %}
   </div>
 </div>
 
