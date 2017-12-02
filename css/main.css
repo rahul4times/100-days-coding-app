@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .main {
   float:left;
-  width:58%;
+  width:78%;
   padding:0 20px;
   margin-left: 1%;
   margin-right: 1%;
@@ -60,7 +60,9 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 2px;
 }
 .login-section {
-  background-color:#fff;
+  position:absolute;
+  right:0;
+  top:0;
   float:left;
   width:18%;
   padding:15px;
@@ -70,9 +72,17 @@ h1, h2, h3, h4, h5, h6{
   text-align:center;
   border: 1px solid #828282;
   border-radius: 2px;
+  border:none;
+  background:none;
+}
+.login-img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
 }
 .github-icon i{
-  font-size: 45px;
+  font-size: 60px;
+  background:none;
 }
 .github-icon i:hover{
   color:#828282;
