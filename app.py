@@ -1,9 +1,9 @@
 import os
 import requests
 
+from flask import Flask
 from flask import render_template
 from bs4 import BeautifulSoup
-
 
 
 app = Flask(__name__)
