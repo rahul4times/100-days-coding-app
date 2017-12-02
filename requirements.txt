@@ -18,12 +18,17 @@ decorator==4.1.2
 dnspython==1.15.0
 docutils==0.14
 flake8==3.4.1
+Flask==0.12.2
+Flask-OAuth==0.12
 future==0.16.0
+httplib2==0.10.3
 idna==2.6
 imagesize==0.7.1
+itsdangerous==0.24
 Jinja2==2.9.6
 jinja2-time==0.2.0
 livereload==2.5.1
+lxml==4.1.1
 Markdown==2.6.9
 MarkupSafe==1.0
 matplotlib==2.1.0
@@ -32,6 +37,7 @@ mkdocs==0.17.1
 mkdocs-cinder==0.9.4
 networkx==2.0
 numpy==1.13.3
+oauth2==1.9.0.post1
 OTXv2==1.2
 pandas==0.20.3
 patsy==0.4.1
@@ -61,5 +67,6 @@ statsmodels==0.8.0
 tornado==4.5.2
 typing==3.6.2
 urllib3==1.22
+Werkzeug==0.12.2
 whichcraft==0.4.1
 xmltodict==0.11.0
