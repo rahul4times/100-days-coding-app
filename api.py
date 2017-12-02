@@ -28,11 +28,11 @@ def user():
     request = requests.get()
 
 
-def project():
+def repo():
     """Get a single user.
 
     Example:
-        >>>GET projects/:username
+        >>>GET repos/:username
         {
           "owner_url": "https://api.github.com/repos/api-playground/projects-test",
           "url": "https://api.github.com/projects/1002604",
