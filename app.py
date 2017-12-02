@@ -13,8 +13,8 @@ API_URL = "https://api.github.com"
 
 
 @app.route('/')
-def main(name=None):
-    return render_template('index.html', name=name)
+def main():
+    return render_template('index.html')
 
 
 def user():
