@@ -17,7 +17,6 @@ $(document).ready(function () {
     //   }
     // });
 
-
     var list_people = [["Noel Serrato", "https://github.com/serrato1", "images/commit-01.png"],
         ["David", "https://github.com/ratchetwrench", "images/commit-02.png"],
         ["Rahul", "https://github.com/rahul4times", "images/commit-02.png"],
@@ -26,7 +25,7 @@ $(document).ready(function () {
         var person = list_people[i][0];
         var url = list_people[i][1]
         var graph = list_people[i][2];
-        var block = "<h2 id=\"name\"><a href=\"" + url + "\">" + person + "</a></h2> <img class=\"u-full-width\" id=\"graph\" src=\"" + graph + "\"/>";
+        var block = "<h4 id=\"name\"><a href=\"" + url + "\">" + person + "</a></h4> <img class=\"u-full-width\" id=\"graph\" src=\"" + graph + "\"/>";
         $("#main").append(block);
     }
     // var git_person_1 = new User("Noel","this is my bio");
@@ -37,4 +36,10 @@ $(document).ready(function () {
         var block = '<div class="menuitem"><a href="#">' + tags[i] + '</a></div>';
         $("#menu").append(block);
     }
+    $("#content").hide();
+    $("#content").slideDown(2000);
+    $(".menuitem").on("click",function(){
+      $("#main").hide(1000);
+      $("#main").show(1000);
+    })
 })
