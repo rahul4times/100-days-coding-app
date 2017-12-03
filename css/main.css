@@ -15,8 +15,11 @@ h1, h2, h3, h4, h5, h6{
   background-color:#fff;
   padding:30px;
   text-align:center;
-  border-bottom: 1px solid #828282;
   line-height: 5px;
+}
+#graph{
+  width:80%;
+  height:100px;
 }
 .sub-line{
   color: #616161;
@@ -34,8 +37,10 @@ h1, h2, h3, h4, h5, h6{
   text-align:center;
   margin-top:1em;
   border: 1px solid #828282;
+  border:none;
   border-radius: 2px;
   background-color: #FFF;
+  border-radius:10px;
 }
 .menuitem {
   width: 100%;
@@ -55,9 +60,10 @@ h1, h2, h3, h4, h5, h6{
   margin-left: 1%;
   margin-right: 1%;
   margin-top:1em;
-  border: 1px solid #828282;
+  /*border: 1px solid #828282;*/
   background-color: #fff;
   border-radius: 2px;
+  border-radius:10px;
 }
 .login-section {
   position:absolute;
@@ -70,7 +76,7 @@ h1, h2, h3, h4, h5, h6{
   margin-right: 1%;
   margin-top:1em;
   text-align:center;
-  border: 1px solid #828282;
+  /*border: 1px solid #828282;*/
   border-radius: 2px;
   border:none;
   background:none;
@@ -91,15 +97,25 @@ h1, h2, h3, h4, h5, h6{
   background-color:#fff;
   text-align:left;
   padding: 1em;
-  border-top: 1px solid #828282;
+  position: fixed;
+  bottom:0;
+  width:100%;
+  /*border-top: 1px solid #828282;*/
+}
+#user-url{
+  font-style:none;
 }
 .tb{
   height: 3em;
   border: 1px solid #828282;
   border-radius: 2px;
+  border:none;
   margin-bottom: 1em;
   font-size: 14px;
   padding-left: 5px;
+}
+#name{
+  /*color:black;*/
 }
 #btn{
   font-size: 14px;
