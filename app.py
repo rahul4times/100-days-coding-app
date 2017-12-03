@@ -118,7 +118,7 @@ def weekly_commit_count():
     This returns the last week, we only need the last day.
 
     """
-    request = requests.get()
+    request = requests.get(f"{API_URL}/repo/{user}/stats/participation")
 
     last_day_commit_count = request[-1]
 
@@ -139,7 +139,7 @@ def commit_graph():
 
     :return:
     """
-    request = requests.get("/users/{username}/contributions")
+    request = requests.get(f"{API_URL}/users/{username}/contributions")
 
 
 if __name__ == '__main__':

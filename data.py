@@ -1,7 +1,6 @@
 USERS = [{
     'bio': 'Data Science, Python, and Statistics.',
     'login': 'ratchetwrench',
-    'repos_url': 'https://api.github.com/users/ratchetwrench/repos',
     'url': 'https://api.github.com/users/ratchetwrench'
 },
     {
