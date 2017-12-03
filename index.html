@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style type=text/css>{{ get_resource_as_string('css/Skeleton/css/skeleton.css') }}</style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/main.css"></link>
+    <!-- Skeleton CSS -->
+    <link rel="stylesheet" href="css/Skeleton/css/skeleton.css">
+
+    <!-- Custom CSS
+<link rel="stylesheet" href="css/main.css">
+-->
+
 </head>
 <body>
-
-<div class="header">
-  <h1>100 DAYS CODING CHALLENGE</h1>
-  <p><span class="sub-line">make a commitment to youself and learn code</span></p>
-
-  <div class="login-section">
-    <div class="github-icon">
-      <a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-    </div>
-    <!-- <img id="user-img" class="login-img" ></img> -->
-  </div>
-
-</div>
-
+<!-- .container is main centered wrapper -->
 <div class="container">
 
 
+    <!-- Header -->
+    <div class="row">
 
-  <div class="main">
-    <!-- <h2 id="name"></h2>
-    <a href="" id="url"></a>
-    <img id="graph" src=""></img> -->
-  </div>
+        <div class="ten columns">
+            <h1>100 DAYS CODING CHALLENGE</h1>
+            <span>make a commitment to yourself and learn code</span>
+        </div>
 
-  <div class="menu">
-    <h2>TAGS</h2>
-    <p>Pick one</p>
-    <!-- <div class="menuitem"><a href="#">Project1</a></div> -->
+        <!-- Github Login -->
+        <div class="two columns">
+            <a href="#"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>
+        </div>
 
+    </div>
 
+    <!-- Content -->
+    <div class="row">
 
-  </div>
-</div>
+        <!-- Main -->
+        <div id="main" class="ten columns">
+            <!-- <h2 id="name"></h2>
+            <a href="" id="url"></a>
+            <img id="graph" src=""></img> -->
+        </div>
 
-<div class="footer">© 100 Days Coding</div>
+        <!-- Sidebar -->
+        <div id="menu" class="two columns">
+            <h4>TAGS</h4>
+            <!-- <div class="menuitem"><a href="#">Project1</a></div> -->
+        </div>
+
+    </div>
+</div> <!-- /container -->
+
+<div class="row"><span>© 100 Days Coding</span></div>
+
+<!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script  src = "js/app.js"></script>
+<script src="js/app.js"></script>
 <!-- <script  src = "js/graph.js"></script> -->
 
 </body>
