@@ -28,7 +28,7 @@ itsdangerous==0.24
 Jinja2==2.9.6
 jinja2-time==0.2.0
 livereload==2.5.1
-lxml==4.1.1
+lxml==4.6.2
 Markdown==2.6.9
 MarkupSafe==1.0
 matplotlib==2.1.0
