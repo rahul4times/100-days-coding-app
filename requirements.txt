@@ -42,7 +42,7 @@ OTXv2==1.2
 pandas==0.20.3
 patsy==0.4.1
 poyo==0.4.1
-py==1.4.34
+py==1.10.0
 pycodestyle==2.3.1
 pycparser==2.18
 pyflakes==1.5.0
